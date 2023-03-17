@@ -1,4 +1,4 @@
-package stellarBurgers;
+package stellarburgers;
 
 public class User {
     private String email;

@@ -1,4 +1,4 @@
-package stellarBurgersTests;
+package stellarburgerstests;
 
 import com.github.javafaker.Faker;
 import io.qameta.allure.junit4.DisplayName;
@@ -7,17 +7,18 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import stellarBurgers.CreateUser;
-import stellarBurgers.User;
+import stellarburgers.CreateUser;
+import stellarburgers.User;
 
 import static org.hamcrest.Matchers.equalTo;
+import static property.Property.url;
 
 @RunWith(Parameterized.class)
 
 public class CreateUserParametrizedTest {
     @Before
     public void setUp() {
-        RestAssured.baseURI = "https://stellarburgers.nomoreparties.site";
+        RestAssured.baseURI = url;
     }
 
     static Faker faker = new Faker();

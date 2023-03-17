@@ -1,4 +1,4 @@
-package stellarBurgersTests;
+package stellarburgerstests;
 
 import com.github.javafaker.Faker;
 import io.qameta.allure.junit4.DisplayName;
@@ -6,15 +6,16 @@ import io.restassured.RestAssured;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import stellarBurgers.*;
+import stellarburgers.*;
 
 import static org.hamcrest.Matchers.equalTo;
-import static stellarBurgers.CreateUser.responseCreateUser;
+import static property.Property.url;
+import static stellarburgers.CreateUser.responseCreateUser;
 
 public class ChangeUsersDataTest {
     @Before
     public void setUp() {
-        RestAssured.baseURI = "https://stellarburgers.nomoreparties.site";
+        RestAssured.baseURI = url;
     }
     Faker faker = new Faker();
     String randomEmail = faker.internet().emailAddress();

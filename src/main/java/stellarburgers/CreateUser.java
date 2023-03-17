@@ -1,22 +1,22 @@
-package stellarBurgers;
+package stellarburgers;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class LoginUser {
-    public static Response responseLoginUser;
+public class CreateUser {
+    public static Response responseCreateUser;
 
-    @Step("Login user")
-    public static Response loginUser(User user) {
-        responseLoginUser =
+    @Step("Create user")
+    public static Response createUser(User user) {
+        responseCreateUser =
                 given()
                         .header("Content-type", "application/json")
                         .and()
                         .body(user)
                         .when()
-                        .post("/api/auth/login");
-        return responseLoginUser;
+                        .post("/api/auth/register");
+        return responseCreateUser;
     }
 }

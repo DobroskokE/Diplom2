@@ -1,4 +1,4 @@
-package stellarBurgers;
+package stellarburgers;
 
 import java.util.List;
 

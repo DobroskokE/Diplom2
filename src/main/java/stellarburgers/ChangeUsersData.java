@@ -1,4 +1,4 @@
-package stellarBurgers;
+package stellarburgers;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
